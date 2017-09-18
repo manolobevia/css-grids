@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  color: #fff;
+  background-color: #121D2E;
+  background-size: contain;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+.grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 33vw 32vw 35vw;
+  grid-template-rows: 14.26vh 12.052vh 27.048vh 9.568vh 43.608vh; }
+
+time {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  background-color: rgba(18, 29, 46, 0.3);
+  color: #fff;
+  font-size: 1.59vw;
+  text-align: right;
+  padding-right: 1.06vw;
+  padding-top: 2.76vh; }
+
+/**
+ ** OLIN CONTENT
+ **/
+.olin-header {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  background-color: rgba(18, 29, 46, 0.3); }
+  .olin-header h1 {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 2.65vw;
+    padding-top: 4.6vh;
+    margin: 0; }
+
+.olin-laptops {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  background-color: rgba(18, 29, 46, 0.3);
+  margin: 0;
+  font-size: 3.551vw;
+  padding-bottom: 2.76vh; }
+
+.olin-laptops__availability {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  background-color: pink;
+  font-size: 2.332vw;
+  color: #fff;
+  display: flex; }
+  .olin-laptops__availability div {
+    background-color: red;
+    flex-grow: 1;
+    flex-shrink: 1; }
+  .olin-laptops__availability .icon-laptop {
+    color: #fff;
+    padding-right: 0.424vw; }
+  .olin-laptops__availability .device-type__info--count {
+    color: #3C96D2;
+    border-radius: 50%;
+    width: 4.24vw;
+    height: 4.24vw;
+    line-height: 4.24vw;
+    background-color: #fff;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    margin-right: 0.53vw; }
+  .olin-laptops__availability .available {
+    vertical-align: middle;
+    color: #3C96D2;
+    display: block;
+    margin-top: -0.92vh; }
+  .olin-laptops__availability .unavailable {
+    vertical-align: middle;
+    color: #D0011B;
+    display: block;
+    margin-top: -0.92vh; }
+
+.olin-phone-chargers {
+  grid-column: 1 / 3;
+  grid-row: 4;
+  background-color: purple;
+  margin: 0; }
+
+.olin-phone-chargers__availability {
+  grid-column: 1 / 3;
+  grid-row: 5;
+  background-color: blue;
+  display: flex;
+  flex-flow: row wrap; }
+  .olin-phone-chargers__availability div {
+    background-color: red;
+    width: 50%; }
+
+/**
+ ** URIS CONTENT
+ **/
+.uris-header {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: red; }
+
+.uris-laptops {
+  grid-column: 3;
+  grid-row: 2 / 3;
+  background-color: brown;
+  margin: 0; }
+
+.uris-laptops__availability {
+  grid-column: 3;
+  grid-row: 3 / 4;
+  background-color: yellow; }
+
+.uris-phone-chargers {
+  grid-column: 3;
+  grid-row: 4 / 5;
+  background-color: green;
+  margin: 0; }
+
+.uris-phone-chargers__availability {
+  grid-column: 3;
+  grid-row: 5;
+  background-color: orange; }
+
+/*# sourceMappingURL=styles.css.map */

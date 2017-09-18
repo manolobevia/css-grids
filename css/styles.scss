@@ -1,0 +1,190 @@
+  // ==========
+  // CSS VARIABLES
+  // ==========
+  $bg-dark-blue: rgba(18,29,46,.3);
+  $bg-medium-blue: rgba(33,43,57,.3);
+  $light-blue: #3C96D2;
+  $red: #D0011B;
+
+  // Landscpae width scale factor
+  $lw: 0.053vw;
+
+  // Landscpae height scale factor
+  $lh: 0.092vh;
+
+  // Portrait width scale factor
+  $pw: 0.092vw;
+
+  // Portrait height scale factor
+  $ph: 0.053vh;
+
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+
+body {
+  color: #fff;
+  background-color: #121D2E;
+  //background: #121D2E url('~assets/insignia.png') no-repeat bottom right;
+  background-size: contain;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  //overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 33vw 32vw 35vw;
+  grid-template-rows: 155*$lh 131*$lh 294*$lh 104*$lh 474*$lh;
+}
+
+time {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  background-color: $bg-dark-blue;
+  color: #fff;
+  font-size: 30 * $lw;
+  text-align: right;
+  padding-right: 20 * $lw;
+  padding-top: 30 * $lh;
+}
+
+/**
+ ** OLIN CONTENT
+ **/
+
+.olin-header {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  background-color: $bg-dark-blue;
+
+  h1 {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 50 * $lw;
+    padding-top: 50 * $lh;
+    margin: 0;
+  }
+}
+
+.olin-laptops {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  background-color: $bg-dark-blue;
+  margin: 0;
+  font-size: 67 * $lw;
+  padding-bottom: 30 * $lh;
+}
+
+.olin-laptops__availability {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  background-color: pink;
+
+  font-size: 44 * $lw;
+  color: #fff;
+
+  display: flex;
+
+  div {
+    background-color: red;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+    .icon-laptop {
+      color: #fff;
+      padding-right: 8 * $lw;
+    }
+
+    .device-type__info--count {
+      color: $light-blue;
+      border-radius: 50%;
+      width: 80 * $lw;
+      height: 80 * $lw;
+      line-height: 80 * $lw;
+      background-color: #fff;
+      text-align: center;
+      display: inline-block;
+      float: left;
+      margin-right: 10 * $lw;
+    }
+
+    .available {
+      vertical-align: middle;
+      color: $light-blue;
+      display: block;
+      margin-top: -10 * $lh;
+    }
+
+    .unavailable {
+      vertical-align: middle;
+      color: $red;
+      display: block;
+      margin-top: -10 * $lh;
+    }
+
+}
+
+.olin-phone-chargers {
+  grid-column: 1 / 3;
+  grid-row: 4;
+  background-color: purple;
+  margin: 0;
+}
+
+.olin-phone-chargers__availability {
+  grid-column: 1 / 3;
+  grid-row: 5;
+  background-color: blue;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  div {
+    background-color: red;
+    width: 50%;
+  }
+}
+
+/**
+ ** URIS CONTENT
+ **/
+
+.uris-header {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: red;
+}
+
+.uris-laptops {
+  grid-column: 3;
+  grid-row: 2 / 3;
+  background-color: brown;
+  margin: 0;
+}
+
+.uris-laptops__availability {
+  grid-column: 3;
+  grid-row: 3 / 4;
+  background-color: yellow;
+}
+
+.uris-phone-chargers {
+  grid-column: 3;
+  grid-row: 4 / 5;
+  background-color: green;
+  margin: 0;
+}
+
+.uris-phone-chargers__availability {
+  grid-column: 3;
+  grid-row: 5;
+  background-color: orange;
+}
