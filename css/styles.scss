@@ -1,13 +1,13 @@
-// ==========
-// CSS VARIABLES
-// ==========
+/**
+ ** VARIABLES
+ **/
 $bg-dark-blue: rgba(18,29,46,.3);
 $bg-medium-blue: rgba(33,43,57,.3);
 $light-blue: #3C96D2;
 $red: #D0011B;
-// Landscpae width scale factor
+// Landscape width scale factor
 $lw: 0.053vw;
-// Landscpae height scale factor
+// Landscape height scale factor
 $lh: 0.092vh;
 // Portrait width scale factor
 $pw: 0.092vw;
@@ -22,13 +22,13 @@ $ph: 0.053vh;
 body {
   color: #fff;
   background-color: #121D2E;
-  //background: #121D2E url('~assets/insignia.png') no-repeat bottom right;
+  background: #121D2E url('../images/insignia.png') no-repeat bottom right;
   background-size: contain;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
-  //overflow: hidden;
+  overflow: hidden;
 }
 
 .grid {
@@ -36,7 +36,7 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 33vw 32vw 35vw;
-  grid-template-rows: 152*$lh 129*$lh 226*$lh auto 466*$lh;
+  grid-template-rows: 152*$lh 129*$lh 226*$lh 129*$lh auto;
 }
 
 time {
@@ -44,14 +44,16 @@ time {
   grid-row: 1;
   background-color: $bg-dark-blue;
   color: #fff;
-  font-size: 30 * $lw;
+  font-size: 20 * $lw;
   text-align: right;
   padding-right: 20 * $lw;
   padding-top: 30 * $lh;
 }
+
 /**
  ** OLIN CONTENT
  **/
+
 .olin-header {
   grid-column: 1 / 2;
   grid-row: 1;
@@ -76,6 +78,11 @@ time {
   font-weight: 400;
   padding-bottom: 30 * $lh;
   padding-left: 50 * $lw;
+
+  .icon-laptop {
+    font-size: 90 * $lw;
+    display: inline-block;
+  }
 }
 
 .olin-laptops__availability {
@@ -89,7 +96,6 @@ time {
 
   p {
     flex-grow: 1;
-    //flex-shrink: 1;
     margin-top: 10 * $lh;
   }
 }
@@ -115,10 +121,20 @@ time {
   display: flex;
   flex-flow: row wrap;
 
+  .icon-charger {
+    padding-right: 8 * $lw;
+  }
+
   p {
     width: 50%;
     //height: auto;
-    margin: 0;
+    margin: 10 * $lh 0 0;
+    //height: 118 * $lh;
+    &:nth-child(3),
+    &:nth-child(4) {
+      display: inline-block;
+      margin-top: -100 * $lh;
+    }
   }
 }
 
@@ -134,18 +150,6 @@ time {
   margin-right: 10 * $lw;
 }
 
-.icon-laptop {
-  color: #fff;
-  padding-right: 8 * $lw;
-  display: inline-block;
-}
-
-.icon-charger {
-  color: #fff;
-  padding-right: 8 * $lw;
-  display: inline-block;
-}
-
 .available {
   vertical-align: middle;
   color: $light-blue;
@@ -156,44 +160,118 @@ time {
 .unavailable {
   vertical-align: middle;
   color: $red;
+  display: inline-block;
   margin-top: -10 * $lh;
 }
 
-.olin-phone-chargers__availability .available {
-  padding-left: 96 * $lw;
+.olin-phone-chargers__availability .available,
+.olin-phone-chargers__availability .unavailable {
+  padding-left: 98 * $lw;
   display: block;
 }
+
 /**
  ** URIS CONTENT
  **/
+
 .uris-header {
   grid-column: 3;
   grid-row: 1;
-  background-color: red;
+  background-color: $bg-medium-blue;
+  padding-left: 50 * $lw;
+  border-left: 1px solid rgba(255,255,255,.2);
+  padding-top: 10 * $lh;
+
+  h1 {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 40 * $lw;
+    padding-top: 50 * $lh;
+    margin: 0;
+  }
 }
 
 .uris-laptops {
   grid-column: 3;
   grid-row: 2 / 3;
-  background-color: brown;
+  background-color: $bg-medium-blue;
   margin: 0;
+  font-size: 47 * $lw;
+  font-weight: 400;
+  padding-bottom: 30 * $lh;
+  padding-left: 50 * $lw;
+  border-left: 1px solid rgba(255,255,255,.2);
 }
 
 .uris-laptops__availability {
   grid-column: 3;
   grid-row: 3 / 4;
-  background-color: yellow;
+  background-color: $bg-medium-blue;
+  border-left: 1px solid rgba(255,255,255,.2);
+  margin-top: -30 * $lh;
+  padding-left: 50 * $lw;
+  font-size: 30 * $lw;
+  color: #fff;
+  display: flex;
+  flex-flow: column wrap;
+
+  .icon-charger {
+    padding-right: 8 * $lw;
+  }
+
+  .device-count {
+    width: 60 * $lw;
+    height: 60 * $lw;
+    line-height: 60 * $lw;
+    margin-right: 10 * $lw;
+  }
+
+  p {
+    margin: 0 0 30 * $lh;
+  }
 }
 
 .uris-phone-chargers {
   grid-column: 3;
   grid-row: 4 / 5;
-  background-color: green;
+  background-color: $bg-medium-blue;
+  font-size: 47 * $lw;
+  font-weight: 400;
+  padding-bottom: 30 * $lh;
+  padding-left: 50 * $lw;
   margin: 0;
+  border-left: 1px solid rgba(255,255,255,.2);
+
+  .icon-charger {
+    font-size: 40 * $lw;
+    display: inline-block;
+  }
 }
 
 .uris-phone-chargers__availability {
   grid-column: 3;
   grid-row: 5;
-  background-color: orange;
+  background-color: $bg-medium-blue;
+  padding-left: 50 * $lw;
+  font-size: 30 * $lw;
+  color: #fff;
+  display: flex;
+  flex-flow: column wrap;
+  border-left: 1px solid rgba(255,255,255,.2);
+  margin-top: -30 * $lh;
+
+  .icon-charger {
+    padding-right: 8 * $lw;
+  }
+
+  .device-count {
+    width: 60 * $lw;
+    height: 60 * $lw;
+    line-height: 60 * $lw;
+    margin-right: 10 * $lw;
+  }
+
+  p {
+    margin: 0 0 30 * $lh;
+  }
 }
