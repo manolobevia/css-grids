@@ -16,7 +16,7 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 33vw 32vw 35vw;
-  grid-template-rows: 13.984vh 11.868vh 20.792vh 9.384vh 42.872vh; }
+  grid-template-rows: 13.984vh 11.868vh 20.792vh auto 42.872vh; }
 
 time {
   grid-column: 2 / 3;
@@ -49,6 +49,7 @@ time {
   background-color: rgba(18, 29, 46, 0.3);
   margin: 0;
   font-size: 3.551vw;
+  font-weight: 400;
   padding-bottom: 2.76vh;
   padding-left: 2.65vw; }
 
@@ -62,13 +63,14 @@ time {
   display: flex; }
   .olin-laptops__availability p {
     flex-grow: 1;
-    flex-shrink: 1; }
+    margin-top: 0.92vh; }
 
 .olin-phone-chargers {
   grid-column: 1 / 3;
   grid-row: 4;
   background-color: rgba(18, 29, 46, 0.3);
   font-size: 3.551vw;
+  font-weight: 400;
   padding-bottom: 2.76vh;
   padding-left: 2.65vw;
   margin: 0; }
@@ -84,7 +86,6 @@ time {
   flex-flow: row wrap; }
   .olin-phone-chargers__availability p {
     width: 50%;
-    height: auto;
     margin: 0; }
 
 .device-count {
